@@ -4,14 +4,16 @@
 	</head>
 	<body>
 		<div>
-			<h1><a href="https://www.google.com/">Natalie's Blog</a></h1>
-			</div>
+			<h1><a href="/">Natalie's Blog</a></h1>
+		</div>
 
-        <div>
-            <p>published: 03.28.2015</p>
-            <h2><a href="https://www.google.com/">My first post</a></h2>
-            <p>This is my first post. I changed it from the Latin that was here originally.</p>
-        </div>
+        {% for post in posts %}
+        	<div>
+        		<p>published:{{post.published_date }}</p>
+        		<h1><a href="">{{ post.title }}</a></h1>
+        		<p>{{post.text|linebreaks }}</p>
+            </div>
+        {% endfor %}
 
         <div>
             <p>published: 03.28.2015</p>
